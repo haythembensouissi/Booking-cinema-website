@@ -8,11 +8,12 @@
       <label>Password</label>
       <input class="form-control" type="password" placeholder="password" required />
     </div>
-    <button class="btn" type="submit">Login</button>
+    <router-link to="/HomePage">Login</router-link>
   </form>
 </template>
 
 <script lang="ts">
+
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -22,6 +23,7 @@ export default defineComponent({
     Password: String,
   },
 });
+
 </script>
 
 
