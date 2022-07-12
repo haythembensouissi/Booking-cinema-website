@@ -2,8 +2,9 @@
   <div class="homePage">
    
     <NavBar/>
+    <LeftSideBar/>
     <AllCards/>
-    <Sidebar/>
+    
   </div>
 </template>
 
@@ -11,13 +12,14 @@
 import { defineComponent } from 'vue';
 import NavBar from '@/components/NavBar.vue'; // @ is an alias to /src
 import AllCards from '@/components/AllCards.vue'
-import SideBar from '@/components/SideBar.vue'
+import LeftSideBar from '@/components/LeftSideBar.vue'
 export default defineComponent({
   name: 'HomePage',
   components: {
     NavBar,
+    LeftSideBar,
     AllCards,
-    SideBar
+    
   },
 });
 </script>

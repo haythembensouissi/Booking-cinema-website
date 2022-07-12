@@ -1,16 +1,17 @@
 <template>
-    <h1>
-    this is a login page
-    <router-link to="/HomePage">Ok</router-link>
-    </h1>
+  <div>
+    <LoginForm />
+  </div>
 </template>
+
+
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import LoginForm from '@/components/LoginForm.vue'
 export default defineComponent({
-  name: 'LogIn',
+  name: 'LoginView',
   components: {
-   
+      LoginForm,
   },
 });
 </script>
