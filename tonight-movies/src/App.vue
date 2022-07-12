@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">home</router-link> |
     <router-link to="/about">signup</router-link>
-    <router-link to="#">log in </router-link>
+    <router-link to="/login">log in </router-link>
   </nav>
   <router-view/>
 </template>
