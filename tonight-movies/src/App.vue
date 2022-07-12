@@ -1,7 +1,8 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">home</router-link> |
+    <router-link to="/about">signup</router-link>
+    <router-link to="/login">log in </router-link>
   </nav>
   <router-view/>
 </template>
@@ -15,8 +16,10 @@
   color: #2c3e50;
 }
 
+
 nav {
   padding: 30px;
+  background-color: red;
 }
 
 nav a {
@@ -24,7 +27,12 @@ nav a {
   color: #2c3e50;
 }
 
+
 nav a.router-link-exact-active {
   color: #42b983;
+  margin-left: 10px;
+  font-size: larger;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 </style>

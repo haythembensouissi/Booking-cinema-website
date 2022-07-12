@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
-    <h1>Welcome to tonight movies</h1>
-  </div>
+    <h1>
+    this is a login page
+    <router-link to="/HomePage">Ok</router-link>
+    </h1>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HomeView',
+  name: 'LogIn',
   components: {
    
   },
