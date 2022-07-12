@@ -36,7 +36,7 @@ export default defineComponent({
  position: absolute;
  height: 50px;
  margin-top:-25px;
- align-content: ;
+ align-content: center ;
 }
 nav{
     

@@ -1,7 +1,7 @@
 <template>
   <nav class="welcomeNavBar">
     <router-link to="/">home</router-link> |
-    <router-link to="/about">signup</router-link>
+    <router-link to="/signup">signup</router-link>
     <router-link to="/login">log in </router-link>
   </nav>
   <router-view/>
@@ -12,7 +12,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+text-align: center;
   color: #2c3e50;
 }
 
