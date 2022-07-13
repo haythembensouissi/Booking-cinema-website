@@ -2,7 +2,7 @@ import SignUpview from '@/views/SignUpview.vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomePage from '../views/HomePage.vue'
-
+import BookingPage from '../views/BookingPage.vue'
 import LogIn from '../views/LogInView.vue'
 
 
@@ -37,7 +37,13 @@ const routes: Array<RouteRecordRaw> = [
     path:'/login',
     name:'login',
     component:LogIn
+  },
+  {
+    path:'/BookingPage',
+    name:'BookingPage',
+    component:BookingPage,
   }
+
 ]
 
 const router = createRouter({

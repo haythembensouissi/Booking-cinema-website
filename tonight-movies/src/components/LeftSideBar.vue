@@ -36,15 +36,15 @@ a{
   left: 250px;
   width: 250px;
   height: 100%;
-  margin-top: -44px;
+  margin-top: 7px;
   margin-left: -250px;
   overflow-y: auto;
-  background: #bfc4c7;
+  background: rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border-radius: 15px;
+  border-radius: 5px;
     text-align: center;
   
 }
