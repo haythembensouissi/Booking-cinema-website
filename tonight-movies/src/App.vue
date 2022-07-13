@@ -4,6 +4,9 @@
     <router-link to="/about">signup</router-link>
     <router-link to="/login">log in </router-link>
   </nav>
+  <h1>
+    
+  </h1>
   <router-view/>
 </template>
 <script>
