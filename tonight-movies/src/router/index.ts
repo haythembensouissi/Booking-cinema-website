@@ -1,4 +1,4 @@
-import AboutView from '@/views/SignUpView.vue'
+import SignUpview from '@/views/SignUpview.vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomePage from '../views/HomePage.vue'
@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     //component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
 
-    component: AboutView
+    component: SignUpview
   },
   {
     path: '/HomePage',

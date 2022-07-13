@@ -19,24 +19,25 @@ USE `cinemadb` ;
 -- Table `cinemadb`.`movies`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `movies` (
-  `idmovie` SERIAL NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) ,
-  `desc` VARCHAR(255) ,
-  `time` DATETIME ,
-  `imgurl` VARCHAR(255) ,
-  `categorie` VARCHAR(45) ,
-  PRIMARY KEY (`idmovie`));
-
-
+  `idmovie` SERIAL NOT NULL AUTO_INCREMENT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `desc` VARCHAR(255) NOT NULL,
+  `time` DATETIME NOT NULL,
+  `imgurl` VARCHAR(255) NOT NULL,
+  `categorie` VARCHAR(45) NOT NULL,
+  
+  PRIMARY KEY (`idmovie`);
+ 
+);
 
 -- -----------------------------------------------------
 -- Table `cinemadb`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `users` (
-  `idusers` SERIAL NOT NULL AUTO_increment ,
-  `username` VARCHAR(45) ,
-  `password` VARCHAR(45) ,
-  `email` VARCHAR(45) ,
+  `idusers` SERIAL NOT NULL AUTO_increment NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
   `idmovie`SERIAL ,
   PRIMARY KEY (`idusers`),
   INDEX `idmovie_idx` (`idmovie` ASC) VISIBLE,
@@ -66,3 +67,45 @@ INSERT INTO users (username,password,email,idmovie) VALUES ('haythem','password'
 --     imgurl character varying(255)[] COLLATE pg_catalog."default",
 --     CONSTRAINT movies_pkey PRIMARY KEY (idmovie)
 -- )
+CREATE TABLE IF NOT EXISTS `chairs`(
+  `idchairs` SERIAL NOT NULL AUTO_increment NOT NULL,
+  `chair1` VARCHAR(45) NOT NULL default 'empty',
+  `chair2` VARCHAR(45) NOT NULL default 'empty',
+  `chair3` VARCHAR(45) NOT NULL default 'empty',
+  `chair4` VARCHAR(45) NOT NULL default 'empty',
+  `chair5` VARCHAR(45) NOT NULL default 'empty',
+  `chair6` VARCHAR(45) NOT NULL default 'empty',
+  `chair7` VARCHAR(45) NOT NULL default 'empty',
+  `chair8` VARCHAR(45) NOT NULL default 'empty',
+  `chair9` VARCHAR(45) NOT NULL default 'empty',
+  `chair10` VARCHAR(45) NOT NULL default 'empty',
+  `chair11` VARCHAR(45) NOT NULL default 'empty',
+  `chair12` VARCHAR(45) NOT NULL default 'empty',
+  `chair13` VARCHAR(45) NOT NULL default 'empty',
+   `chair14` VARCHAR(45) NOT NULL default 'empty',
+  `chair15` VARCHAR(45) NOT NULL default 'empty',
+  `chair16` VARCHAR(45) NOT NULL default 'empty',
+  `chair17` VARCHAR(45) NOT NULL default 'empty',
+  `chair18` VARCHAR(45) NOT NULL default 'empty',
+  `chair19` VARCHAR(45) NOT NULL default 'empty',
+  `chair20` VARCHAR(45) NOT NULL default 'empty',
+  `chair21` VARCHAR(45) NOT NULL default 'empty',
+  `chair22` VARCHAR(45) NOT NULL default 'empty',
+  `chair23` VARCHAR(45) NOT NULL default 'empty',
+  `chair24` VARCHAR(45) NOT NULL default 'empty',
+   `chair25` VARCHAR(45) NOT NULL default 'empty',
+  `chair26` VARCHAR(45) NOT NULL default 'empty',
+  `chair27` VARCHAR(45) NOT NULL default 'empty',
+  `chair28` VARCHAR(45) NOT NULL default 'empty',
+  `chair29` VARCHAR(45) NOT NULL default 'empty',
+  `chair30` VARCHAR(45) NOT NULL default 'empty',
+
+  `cinemachairs` SERIAL,
+ PRIMARY KEY (`idchairs`),
+   CONSTRAINT `pk1`
+    FOREIGN KEY (`cinemachairs`)
+    REFERENCES `cinemadb`.`movies` (`idmovie`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+
+);
