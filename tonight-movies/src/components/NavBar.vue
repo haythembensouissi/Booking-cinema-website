@@ -3,7 +3,7 @@
     <div>
       
       <div id="sidebar">
-        <nav className="nav">
+        <nav class="nav">
           <div class="Seach">
             Search
             <input id="SearchBar" />
@@ -38,9 +38,7 @@ export default defineComponent({
  margin-top:-25px;
  align-content: center ;
 }
-nav{
-    
-}
+
 .Seach{
     color: white;
 }
