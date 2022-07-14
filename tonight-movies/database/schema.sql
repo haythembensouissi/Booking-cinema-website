@@ -19,7 +19,7 @@ USE `cinemadb` ;
 -- Table `cinemadb`.`movies`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `movies` (
-  `idmovie` SERIAL NOT NULL AUTO_INCREMENT,
+  `idmovie` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) ,
   `desc` VARCHAR(255) ,
   `time` DATETIME ,
@@ -33,11 +33,11 @@ CREATE TABLE IF NOT EXISTS `movies` (
 -- Table `cinemadb`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `users` (
-  `idusers` SERIAL NOT NULL AUTO_increment ,
+  `idusers` INT NOT NULL AUTO_increment ,
   `username` VARCHAR(45) ,
   `password` VARCHAR(45) ,
   `email` VARCHAR(45) ,
-  `idmovie`SERIAL ,
+  `idmovie` INT ,
   PRIMARY KEY (`idusers`),
   INDEX `idmovie_idx` (`idmovie` ASC) VISIBLE,
   CONSTRAINT `idmovie`

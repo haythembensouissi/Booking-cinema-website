@@ -3,13 +3,13 @@ import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } 
 
 @Entity('Movies')
 
-export class Movies extends BaseEntity{
+export class Movies {
     @PrimaryGeneratedColumn('increment')
-    id!: number;
+    id: number;
     @Column()
-    name!: string;
+    name: string;
     @Column()
-    desc!: string;
+    desc: string;
 
 
     @CreateDateColumn({
