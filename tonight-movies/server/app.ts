@@ -1,16 +1,18 @@
 import express,{ Request, Response, NextFunction } from 'express';
-
+import bcrypt = require("bcryptjs");
+import JsonWebToken = require("jsonwebtoken")
 import cors from "cors"
+
 const app = express();
 const port = 3000;
+const SECRET_JWT_CODE = "psmR3Hu0ihHKfqZymo1m"
+
 app.use(cors())
 app.use(express.json())
 import connection from "./connection"
 
-app.get("/",(req:Request,res:Response)=>{
-  res.status(200).send("te5dem")
-})
-app.get("/api",(req:Request,res:Response)=>{
+// fetch all the movies
+app.get("/movies",(req:Request,res:Response)=>{
   const sql="SELECT * FROM MOVIES;"
   connection.query(sql,(err,results)=>{
     if(err){
@@ -21,7 +23,8 @@ app.get("/api",(req:Request,res:Response)=>{
     }
   })
 })
-app.post("/api",(req:Request,res:Response)=>{
+// add new user 
+app.post("/signup/user",(req:Request,res:Response)=>{
   const sql="INSERT INTO USERS (username,password,email) VALUES(?,?,?)"
   connection.query(sql,[req.body.username,req.body.password,req.body.email],(error,results)=>{
     if(error){
@@ -43,7 +46,9 @@ app.post("/api",(req:Request,res:Response)=>{
 //     }
 //   })
 // })
-app.get("/api/users",(req:Request,res:Response)=>{
+
+// get one user
+app.get("/login/user",(req:Request,res:Response)=>{
   const sql=`SELECT * FROM USERS WHERE email=? AND password=?;`
   connection.query(sql,[req.body.email,req.body.password],(err,results)=>{
     if(err){

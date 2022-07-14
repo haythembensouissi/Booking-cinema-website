@@ -4,11 +4,10 @@
       <div class="form-group">
         <label>Username</label><br />
         <input class="form-control" placeholder="Enter your name" required v-model="Username" /><br />
-
-
+        <label>Email</label><br />
+        <input class="form-control" placeholder="Enter your email" required v-model="Email" /><br />
         <label>Password</label><br />
         <input class="form-control" type="password" placeholder="password" required v-model="Username" /><br /> <br />
-      
         <router-link to="/HomePage" class="button">Login</router-link>
       </div>
     </section>
@@ -24,11 +23,13 @@ export default defineComponent({
   props: {
     Username: String,
     Password: String,
+    Email: String,
   },
   data() {
     return {
       username: String,
       password: String,
+      email: String,
       error: String,
 
     }
