@@ -1,11 +1,13 @@
 <template>
  <div class="Container"  v-for="movie in Movies" :key="movie.id">
     <div  class="MovieContainer">
+       
         <img :src="`${movie.image_url}`"
   alt="image"/>
-        <h2 class="MovieName">{{movie.name}}</h2>
+    <h2 class="MovieName">{{movie.name}}</h2>
         <h2 class="Movietime">{{movie.time}}</h2>
-
+       
+       <v-btn class="watch"><router-link to="/BookingPage"> Watch </router-link> </v-btn> 
     </div>
 
  </div>
@@ -40,7 +42,7 @@ display: grid;
 .MovieContainer{
     text-align: center;
     display: grid;
-  height: 630px;
+  height: 600px;
   
 
 
@@ -57,9 +59,26 @@ img{
     height: 450px;
     border: 2px solid grey  ;
     border-radius: 15px;
+    margin: 0px;
     
 }
 img:hover{
     background-color: rgb(59, 59, 59);
+}
+.watch{
+  width: 280px;
+  margin:0px;
+  height: 60px;
+  background-color: yellow;
+  color:black;
+  
+}
+.MovieName{
+  font-size: 20px;
+  margin: 0px;
+}
+.Movietime{
+font-size: 15px;
+  margin: -0px;
 }
 </style>

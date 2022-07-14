@@ -2,13 +2,13 @@
   <form>
     <div class="form-group">
       <label>Username</label>
-      <input class="form-control" placeholder="Enter your name" required />
+      <input class="form-control" placeholder="Enter your name" required v-model="Username"/>
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input class="form-control" type="password" placeholder="password" required />
+      <input class="form-control" type="password" placeholder="password" required v-model="Username" />
     </div>
-    <router-link to="/HomePage">Login</router-link>
+    <router-link to="/HomePage" >Login</router-link>
   </form>
 </template>
 
@@ -22,7 +22,20 @@ export default defineComponent({
     Username: String,
     Password: String,
   },
-});
+  data(){
+    return{
+      username:String,
+      password:String,
+      error:String,
+      
+    }
+  },
+  
+  methods: {
+  
+}
+})
+
 
 </script>
 
