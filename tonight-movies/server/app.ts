@@ -32,18 +32,18 @@ app.post("/api",(req:Request,res:Response)=>{
     }
   })
 })
-// app.get("/api/users",(req:Request,res:Response)=>{
-//   const sql="SELECT * FROM USERS;"
-//   connection.query(sql,(err,results)=>{
-//     if(err){
-//       console.log(err)
-//     }
-//     else{
-//       res.status(200).send(results)
-//     }
-//   })
-// })
 app.get("/api/users",(req:Request,res:Response)=>{
+  const sql="SELECT * FROM USERS;"
+  connection.query(sql,(err,results)=>{
+    if(err){
+      console.log(err)
+    }
+    else{
+      res.status(200).send(results)
+    }
+  })
+})
+app.get("/api/user",(req:Request,res:Response)=>{
   const sql=`SELECT * FROM USERS WHERE email=? AND password=?;`
   connection.query(sql,[req.body.email,req.body.password],(err,results)=>{
     if(err){
