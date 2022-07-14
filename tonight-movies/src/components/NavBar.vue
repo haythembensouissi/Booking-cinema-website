@@ -4,12 +4,12 @@
       
       <div id="sidebar">
         <nav class="nav">
-          <div class="Seach">
+          <div class="Search">
             Search
-            <input id="SearchBar" />
+            <input id="SearchBar" v-model="search" @change="test"/>
           </div>
           <div class="Logout">
-            Log Out
+           <router-link to="/login">Log Out</router-link> 
           </div>
         </nav>
       </div>
@@ -23,8 +23,20 @@
 
 export default defineComponent({
   name: 'NavBar',
- 
+ data(){
+    return{
+      search:String,
+      
+    }
+  },
+  methods:{
+    test:(search:any)=>{
+      console.log(search)
+    }
+  }
  });
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -32,18 +44,24 @@ export default defineComponent({
 #sidebar{
  
   width: 100%;
- background-color: rgb(26, 23, 201);
+ background-color: rgba(0, 0, 0, 0.7);
  position: absolute;
  height: 50px;
  margin-top:-25px;
  align-content: center ;
 }
 
-.Seach{
+.Search{
+  text-align: center;
     color: white;
 }
 .Logout{
-    
+    text-align: right;
     color: white;
+    width: 100px;
+    margin-left: 1200px;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color: white;
 }
 </style>
