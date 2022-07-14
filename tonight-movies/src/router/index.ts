@@ -1,4 +1,4 @@
-import SignUpView from '@/views/SignUpView.vue'
+import SignUpView from '../views/SignUpView.vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomePage from '../views/HomePage.vue'
