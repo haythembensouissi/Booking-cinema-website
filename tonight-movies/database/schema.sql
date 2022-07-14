@@ -46,6 +46,51 @@ CREATE TABLE IF NOT EXISTS `users` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
+
+CREATE TABLE IF NOT EXISTS chairs(
+  idchairs INT NOT NULL AUTO_increment ,
+  chair1 VARCHAR(45) NOT NULL default 'empty',
+  chair2 VARCHAR(45) NOT NULL default 'empty',
+  chair3 VARCHAR(45) NOT NULL default 'empty',
+  chair4 VARCHAR(45) NOT NULL default 'empty',
+  chair5 VARCHAR(45) NOT NULL default 'empty',
+  chair6 VARCHAR(45) NOT NULL default 'empty',
+  chair7 VARCHAR(45) NOT NULL default 'empty',
+  chair8 VARCHAR(45) NOT NULL default 'empty',
+  chair9 VARCHAR(45) NOT NULL default 'empty',
+  chair10 VARCHAR(45) NOT NULL default 'empty',
+  chair11 VARCHAR(45) NOT NULL default 'empty',
+  chair12 VARCHAR(45) NOT NULL default 'empty',
+  chair13 VARCHAR(45) NOT NULL default 'empty',
+   chair14 VARCHAR(45) NOT NULL default 'empty',
+  chair15 VARCHAR(45) NOT NULL default 'empty',
+  chair16 VARCHAR(45) NOT NULL default 'empty',
+  chair17 VARCHAR(45) NOT NULL default 'empty',
+  chair18 VARCHAR(45) NOT NULL default 'empty',
+  chair19 VARCHAR(45) NOT NULL default 'empty',
+  chair20 VARCHAR(45) NOT NULL default 'empty',
+  chair21 VARCHAR(45) NOT NULL default 'empty',
+  chair22 VARCHAR(45) NOT NULL default 'empty',
+  chair23 VARCHAR(45) NOT NULL default 'empty',
+  chair24 VARCHAR(45) NOT NULL default 'empty',
+   chair25 VARCHAR(45) NOT NULL default 'empty',
+  chair26 VARCHAR(45) NOT NULL default 'empty',
+  chair27 VARCHAR(45) NOT NULL default 'empty',
+  chair28 VARCHAR(45) NOT NULL default 'empty',
+  chair29 VARCHAR(45) NOT NULL default 'empty',
+  chair30 VARCHAR(45) NOT NULL default 'empty',
+
+  idmovie INT,
+ PRIMARY KEY (idchairs),
+   CONSTRAINT pk1
+    FOREIGN KEY (idmovie)
+    REFERENCES cinemadb.movies (idmovie)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+
+);
+    
+
 INSERT INTO users (username,password,email,idmovie) VALUES ('haythem','password','email',1);
 -- CREATE TABLE IF NOT EXISTS public.users
 -- (
