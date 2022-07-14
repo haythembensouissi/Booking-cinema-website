@@ -1,6 +1,6 @@
 import mysql from "mysql"
 const connect=mysql.createConnection({
-    host:"127.0.0.1",
+    host:"localhost",
     user:"root",
     password:"root",
     database:"cinemadb"

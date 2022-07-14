@@ -1,8 +1,8 @@
 import express,{ Request, Response, NextFunction } from 'express';
-import mysql from "mysql"
+
 import cors from "cors"
 const app = express();
-const port = 5000;
+const port = 3000;
 app.use(cors())
 app.use(express.json())
 import connection from "./connection"
@@ -22,8 +22,8 @@ app.get("/api",(req:Request,res:Response)=>{
   })
 })
 app.post("/api",(req:Request,res:Response)=>{
-  const sql="INSERT INTO USERS (username,password,email,idmovie) VALUES(?,?,?,?)"
-  connection.query(sql,[req.body.username,req.body.password,req.body.email,req.body.idmovie],(error,results)=>{
+  const sql="INSERT INTO USERS (username,password,email) VALUES(?,?,?)"
+  connection.query(sql,[req.body.username,req.body.password,req.body.email],(error,results)=>{
     if(error){
       console.log(error)
     }
