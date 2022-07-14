@@ -91,7 +91,6 @@ CREATE TABLE IF NOT EXISTS chairs(
 );
     
 
-INSERT INTO users (username,password,email,idmovie) VALUES ('haythem','password','email',1);
 -- CREATE TABLE IF NOT EXISTS public.users
 -- (
 --     iduser integer NOT NULL DEFAULT nextval('users_iduser_seq'::regclass),
@@ -110,4 +109,3 @@ INSERT INTO users (username,password,email,idmovie) VALUES ('haythem','password'
 --     categorie character varying(20) COLLATE pg_catalog."default",
 --     imgurl character varying(255)[] COLLATE pg_catalog."default",
 --     CONSTRAINT movies_pkey PRIMARY KEY (idmovie)
--- )
