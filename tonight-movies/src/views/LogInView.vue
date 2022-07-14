@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <LoginForm />
   </div>
 </template>

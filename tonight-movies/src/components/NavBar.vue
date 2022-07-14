@@ -3,8 +3,8 @@
     <div>
       
       <div id="sidebar">
-        <nav className="nav">
-          <div class="Seach">
+        <nav class="nav">
+          <div class="Search">
             Search
             <input id="SearchBar" v-model="search" @change="test"/>
           </div>
@@ -50,10 +50,8 @@ export default defineComponent({
  margin-top:-25px;
  align-content: center ;
 }
-nav{
-    
-}
-.Seach{
+
+.Search{
   text-align: center;
     color: white;
 }
