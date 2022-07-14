@@ -14,7 +14,7 @@
         </nav>
       </div>
       </div>
-    }
+    
   </div>
 </template>
 

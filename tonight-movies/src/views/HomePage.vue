@@ -6,6 +6,7 @@
     <AllCards/>
     
   </div>
+  <link rel="stylesheet" href="">
 </template>
 
 <script lang="ts">

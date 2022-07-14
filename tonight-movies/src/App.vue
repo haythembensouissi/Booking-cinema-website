@@ -5,9 +5,9 @@
     <router-link to="/login">log in </router-link>
   </nav>
   <h1>
-    
   </h1>
   <router-view/>
+   <h3> night movies 2022 all rights reserved &copy; </h3>
 </template>
 <script>
 
@@ -49,5 +49,7 @@ text-align: center;
   font-size: larger;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+h3{
+  margin-top: 70%;
+}
 </style>
