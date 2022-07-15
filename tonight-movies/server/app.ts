@@ -1,16 +1,16 @@
 import express,{ Request, Response, NextFunction } from 'express';
-
+import bcrypt from "bcryptjs";
+import JsonWebToken from "jsonwebtoken";
 import cors from "cors"
+
 const app = express();
 const port = 5000;
 app.use(cors())
 app.use(express.json())
 import connection from "./connection"
 
-app.get("/",(req:Request,res:Response)=>{
-  res.status(200).send("te5dem")
-})
-app.get("/api",(req:Request,res:Response)=>{
+// fetch all the movies
+app.get("/movies",(req:Request,res:Response)=>{
   const sql="SELECT * FROM MOVIES;"
   connection.query(sql,(err,results)=>{
     if(err){
@@ -21,9 +21,10 @@ app.get("/api",(req:Request,res:Response)=>{
     }
   })
 })
-app.post("/api",(req:Request,res:Response)=>{
-  const sql="INSERT INTO USERS (username,password,email) VALUES(?,?,?)"
-  connection.query(sql,[req.body.username,req.body.password,req.body.email],(error,results)=>{
+// add new user 
+app.post("/signup/user",(req:Request,res:Response)=>{
+  const sql="INSERT INTO USERS (username,password,email,idmovie) VALUES(?,?,?,?)"
+  connection.query(sql,[req.body.username,req.body.password,req.body.email,req.body.idmovie],(error,results)=>{
     if(error){
       console.log(error)
     }
@@ -54,7 +55,17 @@ app.get("/api/user",(req:Request,res:Response)=>{
     }
   })
 })
-
+app.post("/movies",(req:Request,res:Response)=>{
+  const sql="INSERT INTO MOVIES  VALUES (?,?,?,?,?,?)"
+  connection.query(sql,[req.body.idmovie,req.body.name,req.body.desc,req.body.time,req.body.imgurl,req.body.categorie],(err,results)=>{
+    if(err){
+      res.status(500).send(err)
+    }
+    else{
+      res.status(201).send(results)
+    }
+  })
+})
 
 
 app.listen(port, () => {

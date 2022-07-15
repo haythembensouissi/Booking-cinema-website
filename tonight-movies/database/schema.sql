@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `idmovie` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) ,
   `desc` VARCHAR(255) ,
-  `time` DATETIME ,
+  `time` DATETIME DEFAULT CURRENT_TIMESTAMP,
   `imgurl` VARCHAR(255) ,
   `categorie` VARCHAR(45) ,
   PRIMARY KEY (`idmovie`));
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `users` (
   `idusers` INT NOT NULL AUTO_increment ,
-  `username` VARCHAR(45)  ,
+  `username` VARCHAR(45) UNIQUE  ,
   `password` VARCHAR(45) ,
   `email` VARCHAR(45) ,
   `idmovie` INT ,
